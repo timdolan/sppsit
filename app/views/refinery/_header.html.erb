@@ -1,0 +1,22 @@
+<div class="wrap">
+  <div class="float_wrap">
+    <h1>INFORMATION TECHNOLOGY</h1>
+    <div class="logo">&nbsp;
+      <%= link_to ' ', refinery.root_path %>
+    </div>  
+
+<!--
+<h1 id='logo'>
+  <%= link_to Refinery::Core.site_name, refinery.root_path %>
+</h1>
+-->
+
+    
+      <%= render(:partial => "/refinery/menu", :locals => {
+	     :hide_children => 'hide_children',
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
+    
+  </div>
+</div>

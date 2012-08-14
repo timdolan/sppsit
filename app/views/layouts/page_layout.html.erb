@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <!--<div id="page_container">-->
+      <header id="header">
+        <%= render '/refinery/header' -%>
+      </header>
+      
+     <div class="content_outer_wrap">
+      <div class="content_wrap">
+	<div id="subnav">
+	<%= render(:partial => "/refinery/menu", :locals => {
+	     :dom_id => 'submenu',
+             :css => 'menu',
+             :roots => refinery_menu_pages.reject{|p| p.parent_id != @page.root.id },
+             :extra_suffix => 'submenu'
+           }) %>
+      </div>
+      <div id="page_body">
+		  <%= yield %>
+	</div>
+	<div id="base_links"><%= render '/refinery/base_links' %></div>
+	<div class="clear">&nbsp;</div>
+      </div>
+    </div>
+    
+    <footer>
+      <%= render '/refinery/footer' -%>
+    </footer>
+    
+    <%= render '/refinery/javascripts' %>
+  
+  </body>
+</html>

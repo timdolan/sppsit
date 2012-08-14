@@ -1,0 +1,66 @@
+/* alignment styles */
+.text-align-left  {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-justify {
+  text-align: justify;
+}
+
+/* block alignment styles */
+.image-align-left {
+  float: left;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+.image-align-right {
+  float: right;
+  margin-left: 6px;
+  margin-bottom: 6px;
+}
+
+/* font sizes */
+.font-size-small {
+  font-size: 0.75em;
+}
+.font-size-normal {
+  font-size: 1em;
+}
+.font-size-large {
+  font-size: 1.25em;
+}
+.font-color-black {
+  color: #000000;
+}
+.font-color-blue {
+  color: #0000FF;
+}
+.font-color-red {
+  color: #FF0000;
+}
+.font-color-green {
+  color: #00C000;
+}
+.font-color-yellow {
+  color: #FFFF00;
+}
+.background-color-black {
+  background-color: #000000;
+}
+.background-color-blue {
+  background-color: #0000FF;
+}
+.background-color-red {
+  background-color: #FF0000;
+}
+.background-color-green {
+  background-color: #00C000;
+}
+.background-color-yellow {
+  background-color: #FFFF00;
+}
