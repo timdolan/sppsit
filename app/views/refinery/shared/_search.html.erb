@@ -1,0 +1,8 @@
+<div class="search_bar">
+<%= form_tag refinery.search_path do -%>
+  <%= text_field_tag :query, {}, {:type => "search",
+				  :placeholder => "Search site for...",
+				  :value => (params[:query] if params[:query])} %>
+  <%= submit_tag 'Go', :id => 'submit_search_button' %>
+ <% end %>
+ </div>

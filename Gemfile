@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -41,7 +41,7 @@ gem 'jquery-rails'
 # gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
+# gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug'
@@ -55,3 +55,7 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0', :git => 'git://github.com/resolve/refinerycms-search.git', :branch => '2-0-stable'
 gem 'refinerycms-page-images', '~> 2.0.0'
+#  gem 'refinerycms-videojs'
+#  gem 'refinerycms-copywriting' '~> 2.0.2'
+#  gem 'refinerycms-search', '~> 2.0.0'
+

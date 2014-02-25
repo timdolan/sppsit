@@ -10,17 +10,11 @@
       
      <div class="content_outer_wrap">
       <div class="content_wrap">
-	<div id="subnav">
-	<%= render(:partial => "/refinery/menu", :locals => {
-	     :dom_id => 'submenu',
-             :css => 'menu',
-             :roots => refinery_menu_pages.reject{|p| p.parent_id != @page.root.id },
-             :extra_suffix => 'submenu'
-           }) %>
-           <%= link_to(image_tag("servicedesk_button.png"), "http://servicedesk.spps.org", :class=>"servicedesk_button") %>
-      </div>
+	
       <div id="page_body">
+	<a href="javascript:history.back()">Back</a>
 		  <%= yield %>
+	<a href="javascript:history.back()">Back</a>
 	</div>
 	<div id="base_links"><%= render '/refinery/base_links' %></div>
 	<div class="clear">&nbsp;</div>

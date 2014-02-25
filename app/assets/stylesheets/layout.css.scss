@@ -7,7 +7,9 @@ $main_background_color: #e5f3fb;//#e5f3fb;
 $vertical_strip_color: #cae7f6;//#CAE7F6;
 
 $main_link_color: #CC6600;
-$main_link_hover_color: #003366;
+$main_link_hover_color: #005EAA;
+
+$white: #ffffff;
 
 @mixin rounded-corners($radius-top-left, $radius-top-right, $radius-bottom-right, $radius-bottom-left) {
   border-radius: $radius-top-left $radius-top-right $radius-bottom-right $radius-bottom-left;
@@ -39,15 +41,34 @@ body  {
     display: block;
   }
   
-  h1 {
+  .pos_right {
+    display: block;
     float: right;
+    text-align: right;
+    
+    #submit_search_button {
+      border: 1px solid #cccccc;
+      @include background-image(linear-gradient(#ffffff 30%, #cccccc));
+      @include rounded-corners(6px, 6px, 6px, 6px);
+      color: $main_link_color;
+      
+      &:hover {
+	color: $main_link_hover_color;
+      }
+    }
+  }
+  .search_bar {
+    padding: 0;
+  }
+  
+  h1 {
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
     text-shadow: 2px 2px 2px blue;
     width: 400px;
     margin: 0;
-    padding: 50px 0 0 0;
+    padding: 50px 0 10px 0;
   }
 }
 
@@ -81,18 +102,66 @@ body  {
 }
 
 footer {
-  background: url(header_blue_bg.gif) repeat 0 0;
+  //background: url(header_blue_bg.gif) repeat 0 0;
   float: left;
   min-width: 100%;
   min-height: 200px;
   
-  p {
-    color: #ffffff;
-    padding: 50px 20px;
-    text-shadow: 2px 2px 2px blue;
+  .contact {
+    background: url(contact-bkg.gif);
+    height: 160px;
+    text-align: center;
+    color: $white;
+    font-size: 11px;
+    clear: both;
+  }
+  
+  .content {
+    background: url(spps-tagline.gif) no-repeat center 20px transparent;
+    margin: 0 15px;
+    padding: 50px 0 20px;
+    
+    p {
+      padding: 0;
+    }
+    
+    a {
+      color: $white;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0 6px;
+    
+      &:hover {
+	text-decoration: underline;
+      }
+    }
+  }
+
+  #footerNav1, #footerNav2, #footerNav3 {
+    clear: both;
+    display: block;
+    margin-top: 16px;
+    width: 100%;
   }
 }
 
+a {
+  color: $main_link_color;
+  text-decoration: none;
+    
+  &:hover {
+    color: $main_link_color;
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #005eaa;
+}
+strong {
+  color: #666666;
+}
 
 /* navigation menu */
 #menu {
@@ -192,6 +261,11 @@ footer {
       }
     }
   }
+
+  a.servicedesk_button {
+     
+      
+    }
   
   a {
     text-decoration: none;
@@ -216,6 +290,7 @@ footer {
     margin: 1px 1px 1px 6px;
   }
 }
+
 
 #home_body {
   padding: 20px 0;
@@ -289,7 +364,7 @@ footer {
 
 
 /* Info Section - Middle 3 boxes on homepage */
-section#left_box, section#middle_box, section#right_box {
+section#left_box, section#middle_box, section#right_box, section#side_body {
   background-color: $vertical_strip_color;
   display: block;
   border: none;
@@ -327,24 +402,11 @@ section#left_box, section#middle_box, section#right_box {
   p, li {
     font-size: 90%;
     padding: 6px 0;
-    color: #333333;
+    color: #666666;
   }
   li {
     list-style-type: disc;
     list-style-position: inside;
-  }
-  a.servicedesk {
-    background-color: green;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 2px 16px;
-    @include rounded-corners(6px, 6px, 6px, 6px);
-    border: 1px solid #333333;
-    
-    &:hover {
-      color: #dddddd;
-    }
   }
 }
 
@@ -363,8 +425,6 @@ section#body {
     padding: 4px;
   }
 }
-
-
 
 
 /* Base Links - Links at bottom of pages */

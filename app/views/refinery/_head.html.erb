@@ -8,20 +8,36 @@
   <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
   <%= yield :meta %>
 
-  <%= stylesheet_link_tag "application", "formatting", "theme" %>
+  <%= stylesheet_link_tag "application", "formatting", "theme", "colorbox" %>
   <%= stylesheet_link_tag "home" if home_page? %>
   <%= yield :stylesheets %>
   <!--[if IE]>
     <%= stylesheet_link_tag "ie.css.scss" %>
   <![endif]-->
   
-  <%= render '/refinery/google_analytics' %>
-
   <%= javascript_include_tag 'modernizr-min' %>
   <%= javascript_include_tag 'jquery.1.5.1.min.js' %>
   <%= javascript_include_tag 'jquery.easing.1.3.js' %>
   <%= javascript_include_tag 'slides.min.jquery.js' %>
   <%= javascript_include_tag 'jquery.cookie.js' %>
   <%= javascript_include_tag 'jquery.dcjqaccordion.2.7.min.js' %>
+  <%= javascript_include_tag 'jquery.colorbox.js' %>
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37746737-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+    $(document).ready(function() {
+      $(".iframe").colorbox({iframe:true, width:"972px", height:"702px"});
+    });
+    
+  </script>
 
 </head>
